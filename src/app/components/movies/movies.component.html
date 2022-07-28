@@ -1,0 +1,25 @@
+<h1>Popular Movies</h1>
+<section class="container">
+  <ng-container *ngFor="let movie of movies">
+    <article class="movie">
+      <div class="movie-thumb-container">
+        <img *ngIf="movie.poster_path" src="{{imageURL+movie.poster_path}}" alt="movie-thumbnail"
+          class="movie-thumbnail">
+      </div>
+      <div class="movie-description">
+        <p class="movie-name">{{movie.original_title}}</p>
+      </div>
+      <span>Release Date:</span>
+      <div class="movie-info">
+        <p class="movie-release-date">{{movie.release_date}}</p>
+        <p class="movie-rating">
+          <img src="../../../assets/images/star-icon.svg" alt="star-icon">
+          {{movie.vote_average}}
+        </p>
+      </div>
+    </article>
+  </ng-container>
+  <div class="load-more">
+    <button mat-button class="load-more-button" (click)="page = page+1; loadMore()">Load More</button>
+  </div>
+</section>

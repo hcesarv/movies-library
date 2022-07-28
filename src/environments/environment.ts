@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   api_key: '1eb750f85aeb064c2a8ef2a8a744d055',
   api_token: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZWI3NTBmODVhZWIwNjRjMmE4ZWYyYThhNzQ0ZDA1NSIsInN1YiI6IjYyZTA3NDJiYTQ0ZDA5MDdkYTI5NjVhZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-uWHTdWtOQd_TnznTWERXCaEjw2aOXqRIDEbcsyh9wc',
-  baseURL: 'https://api.themoviedb.org/3'
+  baseURL: 'https://api.themoviedb.org/3',
+  imgURL: 'http://image.tmdb.org/t/p/w780',
 };
 
 /*
