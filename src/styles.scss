@@ -34,9 +34,5 @@ $movies-library-theme: mat.define-light-theme((
 @include mat.all-component-themes($movies-library-theme);
 
 /* You can add global styles to this file, and also import other style files */
-@font-face {
-  font-family: Death Star;
-  src: url(assets/fonts/Death_Star.otf) format("opentype");
-}
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Death Star', Roboto, sans-serif !important; }
+body { margin: 0; font-family: Roboto, sans-serif !important; }

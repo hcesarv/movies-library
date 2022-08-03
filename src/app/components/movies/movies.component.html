@@ -1,10 +1,10 @@
 <h1>Popular Movies</h1>
 <section class="container">
   <ng-container *ngFor="let movie of movies">
-    <article class="movie">
+    <article class="movie" (click)="openMovieDetails(movie.id)">
       <div class="movie-thumb-container">
         <img *ngIf="movie.poster_path" src="{{imageURL+movie.poster_path}}" alt="movie-thumbnail"
-          class="movie-thumbnail">
+          class="movie-poster">
       </div>
       <div class="movie-description">
         <p class="movie-name">{{movie.original_title}}</p>

@@ -1,0 +1,55 @@
+.container {
+  height: 100%;
+  max-height: 70vh;
+  width: 100%;
+
+  #background {
+    background-size: cover;
+    max-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+
+.movie {
+  &-wrapper {
+    max-height: 100%;
+    // width: 100%;
+    background: linear-gradient(to right, rgba(44, 42, 42, 0.575) 150px, rgba(31.5, 10.5, 10.5, 0.84) 100%);
+    padding: 2rem;
+    display: flex;
+    // flex-direction: column;
+  }
+
+  &-poster {
+    min-width: 18.75rem;
+    width: 40%;
+    height: 70%;
+    border-radius: 8px;
+    margin: auto;
+  }
+
+  &-overview {
+    padding-left: 2rem;
+  }
+
+  &-title {
+    color: #fff;
+    margin: 0 0 1rem 0;
+    font-size: 3vw;
+  }
+
+  &-sinopsis {
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 1.3vw;
+  }
+
+  &-description {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.3vw;
+    margin-top: .5rem;
+  }
+}

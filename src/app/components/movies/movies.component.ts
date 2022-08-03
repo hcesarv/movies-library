@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movies, MoviesAPIResponse } from 'src/app/models/movies';
 import { MoviesService } from 'src/app/services/movies.service';
 import { environment } from 'src/environments/environment';
@@ -9,10 +10,13 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
-  movies!: Array<Movies>;
+  movies: Array<Movies> = [];
   imageURL = environment.imgURL;
   page = 1;
-  constructor(private movieService: MoviesService) { }
+  constructor(
+    private movieService: MoviesService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.movieService.getConfigurationAPI().subscribe()
@@ -21,5 +25,9 @@ export class MoviesComponent implements OnInit {
 
   loadMore() {
     this.movieService.getPopularMovies(this.page).subscribe((res: any) => this.movies = this.movies.concat(res.results));
+  }
+
+  openMovieDetails(movieId: number) {
+    this.router.navigateByUrl(`/movies/${movieId}`);
   }
 }

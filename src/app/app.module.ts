@@ -13,12 +13,14 @@ import { MatListModule } from '@angular/material/list';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './components/movies/movies.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    MoviesComponent
+    MoviesComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
