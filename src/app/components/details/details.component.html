@@ -6,6 +6,15 @@
         <h1 class="movie-title">{{movie.title}}</h1>
         <h3 class="movie-sinopsis">Sinopsis</h3>
         <p class="movie-description">{{movie.overview}}</p>
+
+        <div>
+          <!-- <mat-progress-spinner color="primary" 
+                                mode="determinate" 
+                                [value]="voteAverage" 
+                                aria-label="Rating">
+          </mat-progress-spinner> -->
+          <div style="position:relative; top: -60px; left: 30px;">{{voteAverage}}</div>
+        </div>
       </div>
     </div>
   </article>

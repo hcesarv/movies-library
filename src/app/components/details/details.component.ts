@@ -13,6 +13,7 @@ export class DetailsComponent implements OnInit {
   movieId = '';
   movie!: Movies;
   imageURL = environment.imgURL;
+  voteAverage = 0;
   constructor(
     private movieService: MoviesService,
     private route: ActivatedRoute
@@ -28,6 +29,7 @@ export class DetailsComponent implements OnInit {
   getMovieDetails(movieId: string | number) {
     this.movieService.getMovieDetails(movieId).subscribe((res: any) =>{ 
       this.movie = res;
+      this.voteAverage = JSON.parse(res.vote_average).toFixed(2) * 10;
       let path = `${this.imageURL}${res.backdrop_path}`;
       document.getElementById('background')!.style.backgroundImage = "url(" + path + ")";
     });
